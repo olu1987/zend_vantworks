@@ -1,0 +1,55 @@
+<?php $this->headTitle('Website Design Offer | Vantworks'); ?>
+
+		<!-- main content header -->
+		<div class="widget-container grey-background" style="background-color:#2A9BE1;">
+			<div class="main-title" style="color:#FFFFFF;">
+				<h1 style="color:#FFFFFF;font-weight:bold;">Get Your 20% Discount</h1>
+				<h2 style="color:#FFFFFF;">Let's build your website</h2>
+			</div>
+		</div>
+		<!-- ./main content header -->
+		<div class="title-container widget-stmnt">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="main-title">
+							<h2>Okay, It's Time To Grow</h2>
+							<hr>
+						</div>
+					</div>	
+				</div>
+			</div>			
+		</div>		
+
+<div class="container">
+	<div class="about-us">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="lead-container" style="background-color:#FFFFFF;">
+								
+					<?php if (!isset($this->contact_id)): //Form has not been submitted OR process in About/contactUs action?>
+						<!-- <h2 class="text-center">Get Your 20% Website Discount</h2>-->
+					
+						<h4 class="text-center">Please complete this form. We shall respond within 3 working hours.</h4>
+							
+							<?php echo $this->form ;?>
+						
+						<div class="form-group">
+						
+							<div class="col-sm-12">
+								<p class="small">Please note that by submitting this form, you confirm that you accept our website <a href='<?php echo $this->url(array('controller'=>'about','action'=>'privacy'), 'default', true);?>'>Privacy Policy.</a></p>
+							</div>
+
+						</div><!-- /.form-group - terms -->		
+					<?php else: ?>
+
+						<?php echo $this->successMessage;  ?> 
+			
+					<?php endif; ?>	
+					
+				</div>	
+				
+			</div><!-- /.col-md-8 - main content -->
+		</div><!-- /.row -->
+	</div><!-- /.about-us -->
+</div><!-- /.container -->

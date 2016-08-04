@@ -1,0 +1,53 @@
+<?php $this->headTitle('Contact Vantworks | Web Applications, Cloud Hosting, Business Analytics'); ?>
+
+		<!-- main content header -->
+		<div class="widget-container grey-background">
+			<div class="main-title">
+				<h1>Contact Vantworks</h1>
+			</div>
+		</div>
+		<!-- ./main content header -->
+
+<div class="container">
+	<div class="about-us">
+		<div class="row">
+			<div class="col-md-8">
+								
+				<?php if (!isset($this->contact_id)): //Form has not been submitted OR process in About/contactUs action?> 
+				
+					<h4>Please fill your details to get in touch with us and we shall respond within one working day.</h4>
+						
+						<?php echo $this->form ;?>
+					
+					<div class="form-group">
+					
+						<div class="col-sm-12">
+							<p class="small">Please note that by submitting this form, you confirm that you accept our website <a href='<?php echo $this->url(array('controller'=>'about','action'=>'privacy'), 'default', true);?>'>Privacy Policy.</a></p>
+						</div>
+
+					</div><!-- /.form-group - terms -->		
+				<?php else: ?>
+
+					<?php echo $this->successMessage;  ?> 
+		
+				<?php endif; ?>	
+					
+					
+			</div><!-- /.col-md-8 - main content -->
+			<div class="col-md-4">
+				<div class="address-wrap">
+				   <h4>Contact Address</h4>
+				   <div class="address-details">
+						   <p>Vantworks Limited</p>
+						   <p>4-5 Bonhill street</p>
+						   <p>London, United Kingdom</p>
+						   <p>EC2A 4BX</p>
+						   <p>Phone: <a href="tel:+442030868255">0203 086 8255</a></p>
+						   <p>Email: <a href="mailto:hello@vantworks.co.uk">hello@vantworks.co.uk</a> </p>
+					   
+					</div> <!-- end agent-details -->
+				</div><!-- /.user-profile -->
+			</div><!-- /.col-md-4 -->
+		</div><!-- /.row -->
+	</div><!-- /.about-us -->
+</div><!-- /.container -->

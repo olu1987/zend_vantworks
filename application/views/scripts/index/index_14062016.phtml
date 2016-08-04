@@ -1,0 +1,181 @@
+		<!-- slider / carousel -->
+		<div class="carousel slide" id="main-carousel" data-ride="carousel">
+			<!-- indicators - circles on the bottom -->
+			<ol class="carousel-indicators">
+				<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#main-carousel" data-slide-to="1"></li>
+			</ol>
+
+			<!-- slider content -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="item-image">
+						<img src="<?php echo $this->baseUrl('/image/'); ?>wheel-plus-balloons.jpg" alt="slider 1" height="600">
+					</div>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Perform Higher</h1>
+							<h2>Grow your business online with world class solutions.</h2>
+							<p>Standout from the crowd</p>
+							<a href="#" class="btn btn-lg btn-primary">learn how</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-image">
+						<img src="<?php echo $this->baseUrl('/image/'); ?>business_guys.jpg" alt="slider 2" height="600">
+					</div>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Business Analytics</h1>
+							<h2>Get actionable insights from your enterprise data</h2>
+							<p>Gain competitive advantage </p>
+							<a href="#" class="btn btn-lg btn-primary">Learn how</a>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<!-- ./slider content -->
+
+			<!-- slider controls - previous/next -->
+			<a href="#main-carousel" class="left carousel-control" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a href="#main-carousel" class="right carousel-control" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+			<!-- ./slider controls -->
+		</div>
+		<!-- ./slider -->
+
+		<!-- widget container with grey background -->
+		<div class="widget-container grey-background">
+			<div class="container">
+				<!-- widget itself -->
+				<div class="widget1">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h2>We offer world class and affordable solutions.</h2>
+						</div>
+					</div>
+				</div>
+				<!-- ./widget itself -->
+			</div>
+		</div>
+		<!-- ./widget container with grey background -->
+
+		<!-- widget with three options -->
+		<div class="widget2 container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="icon">
+						<i class="fa fa-mobile fa-fw"></i>
+					</span>
+					<h2 class="text-center">Web Applications</h2>
+					<p>Vantworks has experience in building profesional and responsive web applications.</p>
+					<p><a class="btn btn-sm btn-learn" href="<?php echo $this->url(array('controller'=>'solutions','action'=>'index'), 'default', true);?>#webApplications">Learn more</a></p>
+				</div>
+				<div class="col-md-4">
+					<span class="icon">
+						<i class="fa fa-bar-chart fa-fw"></i>
+					</span>
+					<h3 class="text-center">Business Analytics</h3>
+					<p>Generate business insights from enterprise data in order to gain a competitive edge.</p>
+					<p><a class="btn btn-sm btn-learn" href="<?php echo $this->url(array('controller'=>'solutions','action'=>'index'), 'default', true);?>#businessAnalytics">Learn more</a></p>
+				</div>
+				<div class="col-md-4">
+					<span class="icon">
+						<i class="fa fa-cloud fa-fw"></i>
+					</span>
+					<h3 class="text-center">Cloud Hosting</h3>
+					<p>Need to launch and scale your applications without limit on the cloud? Vantworks can help.</p>
+					<p><a class="btn btn-sm btn-learn" href="<?php echo $this->url(array('controller'=>'solutions','action'=>'index'), 'default', true);?>#cloudHosting">Learn more</a></p>
+				</div>
+			</div>
+		</div>
+		<!-- ./widget with three options -->
+
+		<!-- partners widget -->
+		<div class="widget3 grey-background">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<p class="client-works">Some clients works and projects</p>
+					</div>
+
+					<!-- partners slider -->
+					<div class="col-md-9">
+						<div class="carousel slide" id="partners-carousel" data-ride="carousel">
+							<!-- slider content -->
+							<div class="carousel-inner">
+								<!-- single slider contains four partners, this way we duplicate the doodle.com's effect -->
+								<div class="item active">
+									<div class="row">
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>tfl_logo.png" alt="tfl logo" width="170" height="50">
+											</a>
+										</div>
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>ridebliss-logo.png" alt="Ridebliss" width="170" height="50">
+											</a>
+										</div>
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>rbh.png" alt="Royal brompton NHS" width="170" height="50">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>aacsl-logo.png" alt="AACSL" width="170" height="50">
+											</a>
+										</div>
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>intuitrics_logo.png" alt="Intuitrics" width="170" height="50">
+											</a>
+										</div>
+										<div class="col-xs-6 col-sm-4">
+											<a href="#" target="_blank">
+												<img src="<?php echo $this->baseUrl('/image/'); ?>ridebliss-logo.png" alt="Ridebliss" width="170" height="50">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- ./slider content -->
+						</div>
+					</div>
+					<!-- ./partners carousel -->
+				</div>
+			</div>
+		</div>
+		<!-- ./partners widget -->
+
+		<!-- large 'why us' section -->
+		<div class="widget4 widget-container why-background">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h3>Why Vantworks?</h3>
+					</div>
+					<div class="col-md-8">
+						<h2>Agile</h2>
+						<p>In today's idea economy, speed is key for a competitive edge. We work with you to bring your ideas to life fast through multiple iterations and feedback processes.</p>
+						<h2>Professional</h2>
+						<p>We follow professional and standard approaches in our delivery process, using best in class technologies and collaboration tools.</p>
+						<h2>Affordable</h2>
+						<p>Our services are built to world class standards and they are affordable for startups, entreprenuers and corporate organisations.</p>
+						
+						<a href="<?php echo $this->url(array('controller'=>'about','action'=>'why-vantworks'), 'default', true);?>">Learn more</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ./large 'why us' section -->

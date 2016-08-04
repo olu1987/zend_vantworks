@@ -1,0 +1,48 @@
+<?php echo $this->headStyle();?>
+<?php $this->headTitle('Page Not Found'); ?>
+
+
+
+
+
+<div class="container">
+
+  <h2><?php echo $this->message ?></h2>
+
+  <?php if (isset($this->exception)): ?>
+  
+  <h3>Exception information:</h3>
+  <p>
+      <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+  </p>
+  
+ 
+
+  <h3>Stack trace:</h3>
+  <pre><?php echo $this->exception->getTraceAsString() ?>
+  </pre>
+
+  <h3>Request Parameters:</h3>
+  <pre><?php echo $this->escape(var_export($this->request->getParams(), true)) ?>
+  </pre>
+
+  <?php endif ?>
+
+	<div class="error-page">
+		<h1>&nbsp;</h1>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="error-page">
+		<p>You can navigate with the following links:</p>
+		<div class="error_list">
+			<ul>
+				<li><a href="<?php echo $this->url(array('controller'=>'index', 'action'=>'index'), 'default', true);?>">Vantworks Homepage</a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'about', 'action'=>'why-vantworks'), 'default', true);?>">Why Vantworks</a></li>
+				<li><a href="<?php echo $this->url(array('controller'=>'solutions', 'action'=>'index'), 'default', true);?>">Solutions</a></li>
+			</ul>
+		</div> <!-- /.error_list -->
+	</div><!-- /.error-page -->
+</div><!-- /.container -->

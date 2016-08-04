@@ -1,0 +1,88 @@
+<?php $this->headTitle('Trust and Safety'); ?>
+
+<?php //echo date picker in the format 'dd/mm/yyyy'
+			
+			$this->headScript()->appendScript('
+                                    $(document).ready(function() {
+									$( "#ride_date" ).datepicker({dateFormat: "dd/mm/yy" , 
+									showOtherMonths: true, 			changeMonth: false, minDate: 0,
+			changeYear: false, defaultDate: +7}).attr("readOnly", "true");
+									});',
+									$type='text/javascript') 
+									
+?>
+
+<?php $script='$(document).ready(function() {
+function log( message ) {
+			$( "<div/>" ).text( message ).prependTo( "#log" );
+			$( "#log" ).scrollTop( 0 );
+		}
+
+		$( "#departure, #destination" ).autocomplete({
+			source: "/rides/destination",
+			minLength: 2,
+			select: function( event, ui ) {
+				log( ui.item ?
+					"Selected: " + ui.item.value + " aka " + ui.item.id :
+					"Nothing selected, input was " + this.value );
+			}
+		});
+	});'; ?>
+<?php $this->headScript()->appendScript($script, $type='text/javascript') ;?>
+
+
+<div class="container">
+	<div class="search-form-container alt">
+		<?php echo $this->ridesForm; ?>
+	</div><!-- /.search-form-container alt -->
+</div><!-- /.container -->
+
+<div class="container">
+	<div class="trust-safety">
+		<h1>Trust and Safety</h1>
+		<p>Ridebliss.com is a trusted and <i>safe</i> ride sharing community of friends and colleagues that enjoy commuting together to work, events etc. Ride sharing helps reduce traffic congestion and promotes sustainable transportation. However, we are not oblivious of the challenges that come with this lofty mission.</p>
+		<p>We believe that trust is social capital that's why Ridebliss was built from the ground up with your privacy and safety in mind. Our processes have been developed with that thinking.</p>
+		<hr class="hr_divider"></hr>
+		<h2>Safety Measures We Have Taken</h2>
+		<p>Here are some safety measures we have taken at our end:</p>
+		<ul>
+			<li>Your personal information is processed and <b>securedly stored</b> in our databases </li>
+			<li>We will <b>never disclose</b> members information without their consent </li>
+			<li>Basic <b>member verifications</b> are carried out before accepting new members to this ride sharing community</li>
+			<li>Only <b>verified members</b> can post and share their rides with other trusted members </li>
+			<li>Only <b>verified members</b> can request for a ride from other trusted members</li>
+			<li>A <b>rating and review system</b> is in place, in order to improve trust amongst members and for community self-regulation </li>
+			<li>We have a <b>secured internal messaging system</b> that enables communication amongst members, without personal emails being disclose to the other member</li>
+		</ul>
+		<hr class="hr_divider"></hr>
+		<h2>Safety Measures for Members - Drivers</h2>
+		<p>As a private driver offering seats on your car via Ridebliss.com, please be mindful of the following:</p>
+		<ul>
+			<li>Only accept ride requests from members you feel comfortable to ride with</li>
+			<li>Check out the members' verification status on Ridebliss.com before accepting to ride with them</li>
+			<li>You may also want to check members social media profile on Facebook, Twitter, LinkedIn</li>
+			<li>Do not make ride arrangements with other members outside our website, except for personal reasons</li>
+			<li>Ensure your communications with other members is done via our messaging platform</li>
+			<li>Use public places as pick up or drop off points</li>
+			<li>Report any abuse as soon as possible</li>
+		</ul>
+		<hr class="hr_divider"></hr>
+		<h2>Safety Measures for Members - Passengers</h2>
+		<p>As a passenger requesting to share ride with other members via Ridebliss.com, please be mindful of the following:</p>
+		<ul>
+			<li>Only ride with other members you feel comfortable with</li>
+			<li>Check out the members' verification status on Ridebliss.com before accepting to ride with them</li>
+			<li>You may also want to check members social media profile on Facebook, Twitter, Linkedin</li>
+			<li>Do not make ride arrangements with other members outside our website, except for personal reasons</li>
+			<li>Ensure your communications with other members is done via our message platform</li>
+			<li>Use public places as pick up or drop off points</li>
+			<li>Request to know other people travelling in the same vehicle</li>
+			<li>Report any abuse as soon as possible</li>
+		</ul>
+		<hr class="hr_divider"></hr><p>For further enquiries about our trust and safety, please <span class="user-login alt"><a href="<?php echo $this->url(array('controller'=>'about','action'=>'contact-us'), 'default', true);?>">Contact Us</a></span>.</p>
+		<h2>Flagging Abuse</h2>
+		<p>We have zero-tolerance for abuse of other members privacy, rights and safety. Members are highly encouraged to report such unlawful incidents regarding abuse of human right and criminality. We shall investigate from our end and then forward same to relevant authorities.</p>
+		<p>Please <span class="user-login alt"><a href="<?php echo $this->url(array('controller'=>'about','action'=>'contact-us'), 'default', true);?>">Report Abuse</a></span> straight away for any such unhappy experiences through this service.</p>
+		<p>However, whilst we make every effort to ensure your happy experience through our service, we are unable to guarantee the protection of the information from misuse, accidental disclosure or unauthorised acts by yourself or others.</p>
+	</div><!-- /.trust-safety -->
+</div><!-- /.container -->

@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+
+
+User-agent: *
+Disallow: /rides/list
+
+
+User-agent: *
+Disallow: /users/list
+
+
+User-agent: Googlebot
+Allow: /
+
+
+
+User-agent: Googlebot
+Disallow: /rides/list
+
+
+User-agent: Googlebot
+Disallow: /users/list
