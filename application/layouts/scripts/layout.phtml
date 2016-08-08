@@ -63,20 +63,19 @@ $this->headMeta($content, $name);
 
 <!-- jQuery cdn files -->
 <?php $this->headScript()->prependFile('//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'); ?>
-<?php $this->headScript()->appendFile('//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');?>
-<?php $this->headScript()->appendFile('//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js');?>
-
+<?php $this->headScript()->appendFile('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');?>
 <?php $this->headScript()->appendFile($this->baseUrl().'/js/jquery.validate.min.js', 'text/javascript'); ?>
 <?php $this->headScript()->appendFile($this->baseUrl().'/js/scripts.js', 'text/javascript'); ?>
 
 
 
 
+
 <!-- END links for jQuery ALS scroll -->
 
-<?php $this->headLink()->prependStylesheet("//netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"); ?>
+<?php $this->headLink()->prependStylesheet("//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"); ?>
 
-<?php $this->headLink()->appendStylesheet("//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"); ?>
+<?php $this->headLink()->appendStylesheet("//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"); ?>
 
 <?php $this->headLink()->appendStylesheet($this->baseUrl().'/css/bootstrap-overrides.css'); ?>
 <?php $this->headLink()->appendStylesheet($this->baseUrl().'/css/styles.css'); ?>
@@ -136,7 +135,7 @@ $this->headMeta($content, $name);
 				<div class="alert alert-cookies alert-dismissible hidden">
 					<button type="button" class="close eu-cookie-law" data-dismiss="alert"><i class="fa fa-times"></i></button>
 					<p>We use cookies to give you the best experience. By continuing to use this site, you agree to our use of cookies. See our <a href="<?php echo $this->url(array('controller'=>'cookies','action'=>'index'), 'default', true);?>">cookie policy.</a></p>
-				</div>		
+				</div>
 				<!-- logo and mobile menu button -->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar"><i class="fa fa-bars"></i></button>
@@ -179,16 +178,16 @@ $this->headMeta($content, $name);
 	<div class="footer-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3 col-sm-12">
 					<img src="<?php echo $this->baseUrl('/image/'); ?>logo-footer.png" alt="slider 1">
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<h1>Company</h1>
 					<ul class="not-styled">
+						<li><a href="<?php echo $this->url(array('controller'=>'about','action'=>'index'), 'default', true);?>">About Us</a></li>					
 						<li><a href="<?php echo $this->url(array('controller'=>'about','action'=>'why-vantworks'), 'default', true);?>">Why Vantworks?</a></li>
-						<li><a href="<?php echo $this->url(array('controller'=>'about','action'=>'why-vantworks'), 'default', true);?>">Our Process</a></li>
+						<li><a href="<?php echo $this->url(array('controller'=>'our-process','action'=>'index'), 'default', true);?>">Our Process</a></li>
 						<li><a href="<?php echo $this->url(array('controller'=>'about','action'=>'contact-us'), 'default', true);?>">Contact Us</a></li>
-						<li><a href="<?php echo $this->url(array('controller'=>'about','action'=>'index'), 'default', true);?>">About Us</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 col-sm-6">
@@ -197,15 +196,12 @@ $this->headMeta($content, $name);
 						<li><a href="<?php echo $this->url(array('controller'=>'solutions','action'=>'web-applications'), 'default', true);?>">Web Applications</a></li>
 						<li><a href="<?php echo $this->url(array('controller'=>'solutions','action'=>'business-analytics'), 'default', true);?>">Business Analytics</a></li>
 						<li><a href="<?php echo $this->url(array('controller'=>'solutions','action'=>'digital-marketing'), 'default', true);?>">Digital Marketing</a></li>
-						<li><a href="">Cloud Hosting</a></li>
-						<li><a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'website-development'), 'default', true);?>">Web Development</a></li>
 						<li><a href="<?php echo $this->url(array('controller'=>'business-website-design','action'=>'index'), 'default', true);?>">Business Website Design</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 col-sm-6">
+				<div class="col-md-3 col-sm-12">
 					<h1>Social</h1>
 					<ul class="not-styled social-icons">
-						<!-- more social icons: http://fortawesome.github.io/Font-Awesome/icons/#brand -->
 						<li><a href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin fa-fw"></i></a></li>

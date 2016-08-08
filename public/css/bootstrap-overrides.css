@@ -11,6 +11,8 @@ a:active{
 	background:#fff;
 	border:0;
 	padding:10px 0 5px 0;
+	border-bottom:1px solid gray;
+	box-shadow:0 0 15px #C9C9C9;
 }
 .navbar-default .navbar-toggle{
 	border:2px solid #2A9BE1;
@@ -388,5 +390,4 @@ text-align:left;
 color:#909090;
 font-size: 12px;
 }
-
 

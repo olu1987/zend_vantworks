@@ -150,8 +150,9 @@ $(document).ready(function(){
 			e.preventDefault();
 		}
 	});
-	
-	/*jquery form validation configuration. Here we declare the values that make the form valid and its error messages. The following is for the sign up form page validation*/
+
+
+/*jquery form validation configuration. Here we declare the values that make the form valid and its error messages. The following is for the sign up form page validation*/
 	
 	$("#leadForm").validate({
 		rules: {
@@ -171,12 +172,47 @@ $(document).ready(function(){
 	    messages: {
 				first_name: "First name required",
 				last_name: "Last name required",
-				Company: "Your company name is required",
+				company: "Your company name is required",
 				
 				email: "Please enter a valid email address",
-				WebsiteURL: "Please enter your company website URL",
+				website: "Please enter your company website URL",
 				position: "Please state your position at your company",
 			}
 			
 		});
+		
+/*jquery form validation configuration. The following is for the contact page form page validation*/
+		$("#contactUsForm").validate({
+		rules: {
+				title: "required",
+				full_name: "required",
+				
+				
+				email: {
+					required: true,
+					email: true
+				},
+				message_type: "required",
+				message: "required",
+				
+				
+			},
+	    messages: {
+				title: "Title required",
+				full_name: "Full name required",
+				
+				email: "Please enter a valid email address",
+				message_type:  "Please tell us what type of enquiry you are making",
+				message: "Please don't forget to send us a message",
+			}
+			
+		});
+		
+		
+if ($('.alert-cookies').css('border-radius') === '0px'){
+	$('body').css('padding-top') === '150px';
+}
+		
 });
+
+

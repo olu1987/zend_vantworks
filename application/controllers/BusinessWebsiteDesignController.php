@@ -48,7 +48,7 @@ class BusinessWebsiteDesignController extends Zend_Controller_Action
 			
 			//$this->view->visitor_message = $visitor_message;
 			
-			//$full_name = ucwords($full_name);
+			$full_name = "$first_name $last_name";
 			
 			$mail_message .="<p>Hi Admin,</p>";
 			$mail_message .="<p>Here is a new message from $first_name $last_name :</p>";
@@ -71,7 +71,7 @@ class BusinessWebsiteDesignController extends Zend_Controller_Action
 				'username' => 'hello@vantworks.co.uk',
 				'password' => 'h3llo!23');
 
-			$transport = new Zend_Mail_Transport_Smtp('mail.ridebliss.com', $config);
+			$transport = new Zend_Mail_Transport_Smtp('mail.vantworks.co.uk', $config);
 
 
 			$mail = new Zend_Mail();

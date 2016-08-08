@@ -55,7 +55,7 @@ class Application_Form_ContactUsForm extends Zend_Form
 				->setAttrib('class', "form-control")
 				->addErrorMessage('Title is required')
 				->addMultiOptions(array(
-				'' => 'please select',
+				'' => 'Select Title ',
 				'Mr' => 'Mr',
 				'Mrs' => 'Mrs',
 				'Miss' => 'Miss',
@@ -73,10 +73,8 @@ class Application_Form_ContactUsForm extends Zend_Form
 				->addFilter('StringTrim')
 				->addValidator('NotEmpty')
 				->addValidator('stringLength', false, array(4, 50))
-				->setValue('your name')
 				//->addValidator($full_name_notempty, true, $full_name_value)
-				->setAttrib('onfocus', $full_name_focus)
-				->setAttrib('onblur', $full_name_blur)
+				->setAttrib('placeholder', 'Full name')
 				->addErrorMessage('Your full name is required, not more than 50 characters');
 
 		$email = new Zend_Form_Element_Text('email');
@@ -89,9 +87,7 @@ class Application_Form_ContactUsForm extends Zend_Form
 				->addFilter('StringTrim')
 				->addFilter('StringToLower')
 				->addErrorMessage("Your email is required and format is 'yourname@something.com'")
-				->setValue('your email')
-				->setAttrib('onfocus', $email_focus)
-				->setAttrib('onblur', $email_blur)
+				->setAttrib('placeholder', 'Your email')
 				->addValidator($email_notempty, true, $email_validate);
 
 		$phone = new Zend_Form_Element_Text('phone');
@@ -142,7 +138,7 @@ class Application_Form_ContactUsForm extends Zend_Form
 				
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setAttrib('id', 'submitbutton')
-			   ->setAttrib('class', "btn btn-ridebliss btn-lg pull-right")	
+			   ->setAttrib('class', "btn btn-lg pull-right")	
 		       ->setLabel('Contact Us');
 		
 		$this->addElements(array($contact_id, $title, $full_name, $email, $phone, $message_type, $message, $submit));

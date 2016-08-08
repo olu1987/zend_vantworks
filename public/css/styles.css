@@ -5,7 +5,7 @@ body{
 	font-size:16px;
 }
 body.eu-cookie-visible{
-	padding-top:85px;
+	padding-top:115px;
 }
 .widget-container{
 	padding:30px 0;
@@ -99,6 +99,26 @@ body.eu-cookie-visible{
 	background-color:#EE3824;
 }
 
+.brand-blue-bkg{
+	background-color:#2A9BE1;
+}
+
+.brand-blue-bkg h1{
+	margin:10px 0;
+	font-size:45px;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-align:center;
+}
+
+.brand-blue-bkg h2{
+	margin:10px 0;
+	font-size:35px;
+	font-weight:300;
+	color:#FFFFFF;
+	text-align:center;
+}
+
 .wood-tile {
 	padding:0px;
 	background:url("../image/cyngn-home.jpg") repeat scroll 0% 0%;	
@@ -132,16 +152,17 @@ body.eu-cookie-visible{
 	padding-right:60px;  
 }
 
-.benefits a {
+.brand-red.benefits-box .benefits a {
 	background-color:#FFFFFF; 
 	border:1px solid #EE3824;
 	color: #EE3824;	
 }
 
-.benefits a:hover {
+.brand-red.benefits-box .benefits a:hover {
 	background-color:#EE3824;
 	border:1px solid #FFFFFF;
 	text-decoration: none;
+	color:#fff;
 }	
 
 .benefits .row{
@@ -162,7 +183,7 @@ body.eu-cookie-visible{
 
 }
 
-.benefits .col-sm-6{
+.benefits .col-sm-6, .benefits .col-sm-5, .benefits .col-sm-7{
 	margin-top:40px;
 }
 .benefits .icon{
@@ -827,6 +848,29 @@ body.eu-cookie-visible{
 	background-image:url(../image/home/tech-guy-laptop.jpg);	
 }
 
+.solutions{
+	background-image:url(../image/home/business_guys.jpg);
+}
+
+
+.applications{
+	background-image:url(../image/home/app-photo-dark.jpg);
+    	
+}
+.analytics{
+	background-image:url(../image/home/analytics-photo3.jpg);
+	background-position:0px -100px;
+	
+    	
+}
+
+.marketing{
+	background-image:url(../image/home/shop-photo.jpg);
+	
+	
+    	
+}
+
 .widget-action {
 	background-color:#6E6868;
 	margin-top:0px;
@@ -1193,6 +1237,7 @@ margin-bottom:30px;
 
 .soln-container p, .soln-container-next p{
 	line-height: 1.8;
+	margin-top: 16px;
 }
 
 .soln-container-next{
@@ -1447,8 +1492,8 @@ list-style-image:none;
 .cta-container .btn-cta:hover,.btn-cta:focus{
 	background-color:#FFFFFF;
 	/**border-color:#F07C29;**/
-	border-color: #2A9BE1;
-	color:#2A9BE1;
+	border-color:#F05A28;
+	color:#F05A28;
 	text-decoration:underline;
 }
 
@@ -1572,96 +1617,19 @@ list-style-image:none;
 	color:#2A9BE1;
 	margin-right:10px;
 }
-/*Olu Styles*/
-.btn-cta {
-  white-space: normal; }
-
-.landpg-col {
-  padding-bottom: 30px; }
-
-.landpg-col p {
-  min-height: 130px;
-  padding-left: 30px; }
-.landpg-col h2 {
-  text-align: left;
-  margin-left: 30px; }
-.landpg-col h4 {
-  padding-left: 30px; }
-.landpg-col ul {
-  padding-left: 30px; }
-
-.widget-header-banner {
-  padding: 80px 0px 85px; }
 
 .error {
   color: red;
   padding-left: 15px; }
+  
+#position{
+	color:initial;
+}
 
-#position.error {
-  color: #444; }
+#title{
+	color:initial;
+}
 
-@media (max-width: 767px) {
-  .landpg-row {
-    margin: initial; }
-
-  .landpg-row {
-    border: none; } }
-/** fix for nav-bar responsive 
-@media (min-width: 991px) {
-  .navbar .container {
-    width: 1100px;
-    text-align: center; } }
-@media (max-width: 991px) {
-  html body {
-    padding-top: 60px; }
-
-  .navbar-nav > li {
-    display: block;
-    padding: 10px; }
-
-  .navbar-header {
-    float: none; }
-
-  .navbar-left, .navbar-right {
-    float: none !important; }
-
-  .navbar-toggle {
-    display: block; }
-
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px; }
-
-  .navbar-collapse.collapse {
-    display: none !important; }
-
-  .navbar-nav {
-    float: none !important;
-    margin-top: 7.5px; }
-
-  .navbar-nav > li {
-    float: none; }
-
-  .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center; }
-
-  .collapse.in {
-    display: block !important; }
-
-  .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none; } }
-
-/*# sourceMappingURL=styles.css.map */
+#message_type{
+	color:initial;
+}
