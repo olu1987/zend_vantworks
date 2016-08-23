@@ -112,11 +112,24 @@ class Application_Form_ContactUsForm extends Zend_Form
 				->addErrorMessage('Enquiry type is required')
 				//->setAttrib('class', 'active_select')
 				->addMultiOptions(array(
-				'' => 'select enquiry type',
+				'' => 'Select enquiry type',
 				'Business Quote' => 'Business Quote',
 				'Customer Support' => 'Customer Support',
 				'Partnership' => 'Partnership',
 				'General' => 'General Enquiry'
+				));
+		$budget = new Zend_Form_Element_Select('budget');
+		$budget->setRequired(true)
+		        ->setLabel('Your Budget')
+				->setAttrib('class', "form-control")
+				->addErrorMessage('Enquiry type is required')
+				//->setAttrib('class', 'active_select')
+				->addMultiOptions(array(
+				'' => 'Your Budget',
+				'£500 - £999' => '£500 - £999 (Save 20% - up to £100)',
+				'£1000 - £3999' => '£1000 - £3999 (Save 20% - up to £800)',
+				'£4000 - £10000' => '£4000 - £10000 (Save 20% - up to £2000) ',
+				'No Budget' => 'No Budget Yet'
 				));
 		
 		
@@ -141,7 +154,7 @@ class Application_Form_ContactUsForm extends Zend_Form
 			   ->setAttrib('class', "btn btn-lg pull-right")	
 		       ->setLabel('Contact Us');
 		
-		$this->addElements(array($contact_id, $title, $full_name, $email, $phone, $message_type, $message, $submit));
+		$this->addElements(array($contact_id, $title, $full_name, $email, $phone, $message_type, $budget, $message, $submit));
 		
 		//	 add decorators to change the default Zend framework rendering
 		// Change the entire form tag rendering
@@ -211,6 +224,16 @@ class Application_Form_ContactUsForm extends Zend_Form
 		
 		
 		$message_type->setDecorators(array(
+		   'ViewHelper',
+		   'Description',
+		   //'Errors',
+		   array('Errors', array('class' => 'post_ad_error')),
+		   array(array('data'=>'HtmlTag'), array('tag' => 'div', 'class'=>'col-md-9')),
+		   array('Label', array('class' => 'control-label col-md-3', 'escape' => false, 'requiredSuffix' => '<span class="leftnav_required">* </span>')),
+		   array(array('row'=>'HtmlTag'),array('tag'=>'div', 'class' => 'form-group'))
+        ));
+		
+		$budget->setDecorators(array(
 		   'ViewHelper',
 		   'Description',
 		   //'Errors',

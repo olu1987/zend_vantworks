@@ -35,13 +35,14 @@ class CampaignController extends Zend_Controller_Action
 			$phone = $contactUsForm->getValue('phone');
 			$message_type = $contactUsForm->getValue('message_type');
 			$message = $contactUsForm->getValue('message');
+			$budget = $contactUsForm->getValue('budget');
 			
 			
 			$sent_date = date('Y-m-d H:i:s');
 		
 			$contactUs = new Application_Model_DbTable_ContactUs();
 
-			$contactUs->addContactMsg($contact_id, $title, $full_name, $email, $phone, $message_type, $message, $sent_date);
+			$contactUs->addContactMsg($contact_id, $title, $full_name, $email, $phone, $message_type, $message, $budget, $sent_date);
 			
 			$visitor_message = $message;
 			

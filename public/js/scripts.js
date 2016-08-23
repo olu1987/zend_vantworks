@@ -167,6 +167,7 @@ $(document).ready(function(){
 				company: "required",
 				website: "required",
 				position: "required",
+				budget: "required",
 				
 			},
 	    messages: {
@@ -177,6 +178,7 @@ $(document).ready(function(){
 				email: "Please enter a valid email address",
 				website: "Please enter your company website URL",
 				position: "Please state your position at your company",
+				budget: "Your budget is required",
 			}
 			
 		});
@@ -193,6 +195,7 @@ $(document).ready(function(){
 					email: true
 				},
 				message_type: "required",
+				budget: "required",
 				message: "required",
 				
 				
@@ -204,6 +207,7 @@ $(document).ready(function(){
 				email: "Please enter a valid email address",
 				message_type:  "Please tell us what type of enquiry you are making",
 				message: "Please don't forget to send us a message",
+				budget: "Your budget is required",
 			}
 			
 		});

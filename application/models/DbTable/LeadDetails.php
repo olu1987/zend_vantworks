@@ -18,7 +18,7 @@ class Application_Model_DbTable_LeadDetails extends Zend_Db_Table_Abstract
 
 	
 	
-	public function addLeadContact($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $sent_date)
+	public function addLeadContact($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $budget, $sent_date)
 	
 	{
 	$data = array(
@@ -30,6 +30,7 @@ class Application_Model_DbTable_LeadDetails extends Zend_Db_Table_Abstract
 	'company' =>$company,
 	'website' =>$website,
 	'position' =>$position,
+	'budget' =>$budget,
 	'sent_date' =>$sent_date
 	);
 	$this->insert($data);

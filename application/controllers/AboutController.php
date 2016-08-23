@@ -51,6 +51,7 @@ class AboutController extends Zend_Controller_Action
 			$email = $contactUsForm->getValue('email');
 			$phone = $contactUsForm->getValue('phone');
 			$message_type = $contactUsForm->getValue('message_type');
+			$budget = $contactUsForm->getValue('budget');
 			$message = $contactUsForm->getValue('message');
 			
 			
@@ -58,7 +59,7 @@ class AboutController extends Zend_Controller_Action
 		
 			$contactUs = new Application_Model_DbTable_ContactUs();
 
-			$contactUs->addContactMsg($contact_id, $title, $full_name, $email, $phone, $message_type, $message, $sent_date);
+			$contactUs->addContactMsg($contact_id, $title, $full_name, $email, $phone, $message_type, $budget, $message, $budget, $sent_date);
 			
 			$visitor_message = $message;
 			
@@ -66,7 +67,7 @@ class AboutController extends Zend_Controller_Action
 			
 			//$full_name = ucwords($full_name);
 			
-			$mail_message .="<p>Hi Admin,</p>";
+			$mail_message ="<p>Hi Admin,</p>";
 			$mail_message .="<p>Here is a new message from $full_name :</p>";
 			$mail_message .="<div>Title: $title</div>";
 			$mail_message .="<div>Full Name: $full_name</div>";
@@ -83,7 +84,7 @@ class AboutController extends Zend_Controller_Action
 
 			// now call the zend_mail function
 
-			$config = array('auth' => 'login',
+			/*$config = array('auth' => 'login',
 				'username' => 'hello@vantworks.co.uk',
 				'password' => 'h3llo!23');
 
@@ -96,7 +97,7 @@ class AboutController extends Zend_Controller_Action
 			$mail->setFrom('hello@vantworks.co.uk', 'Vantworks');
 			$mail->addTo("chuxeze@yahoo.com", "Chuks Ndubueze");
 			$mail->setSubject("Vantworks: Contact Us Message from $full_name");
-			$mail->send($transport);
+			$mail->send($transport);*/
 			
 			
 			$successMessage = "<strong>Thanks $full_name, for contacting us.</strong> <p>We have received your message. We shall be in touch shortly.</p>";

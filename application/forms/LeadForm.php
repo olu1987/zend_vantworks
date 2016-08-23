@@ -167,7 +167,20 @@ class Application_Form_LeadForm extends Zend_Form
 				'Non-Manager' => 'Non-Manager',
 				'Others' => 'Others'
 				));			   
-				
+		
+        $budget = new Zend_Form_Element_Select('budget');
+		$budget->setRequired(true)
+		        ->setLabel('Your Budget')
+				->setAttrib('class', "form-control")
+				->addErrorMessage('Enquiry type is required')
+				//->setAttrib('class', 'active_select')
+				->addMultiOptions(array(
+				'' => 'Your Budget',
+				'£500 - £999' => '£500 - £999 (Save 20% - up to £100)',
+				'£1000 - £3999' => '£1000 - £3999 (Save 20% - up to £800)',
+				'£4000 - £10000' => '£4000 - £10000 (Save 20% - up to £2000) ',
+				'No Budget' => 'No Budget Yet'
+				));		
 				
 				
 				
@@ -176,7 +189,7 @@ class Application_Form_LeadForm extends Zend_Form
 			   ->setAttrib('class', "btn btn-cta btn-lg")	
 		       ->setLabel('GET YOUR OFFER');
 		
-		$this->addElements(array($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $submit));
+		$this->addElements(array($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $budget, $submit));
 		
 		//	 add decorators to change the default Zend framework rendering
 		// Change the entire form tag rendering

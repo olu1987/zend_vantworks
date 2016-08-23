@@ -36,13 +36,13 @@ class BusinessWebsiteDesignController extends Zend_Controller_Action
 			$company = $leadForm->getValue('company');
 			$website = strtolower($leadForm->getValue('website'));
 			$position = $leadForm->getValue('position');
-			
+			$budget = $leadForm->getValue('budget');
 			
 			$sent_date = date('Y-m-d H:i:s');
 		
 			$contactUs = new Application_Model_DbTable_LeadDetails();
 
-			$contactUs->addLeadContact($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $sent_date);
+			$contactUs->addLeadContact($lead_id, $first_name, $last_name, $email, $phone, $company, $website, $position, $budget, $sent_date);
 			
 			$visitor_message = $message;
 			
